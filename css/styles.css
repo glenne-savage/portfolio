@@ -91,10 +91,18 @@ header h1 a span {
 
 .flex-nav ul li {
     margin-left: 2.5em;
+    color: #fff;
+}
+
+.flex-nav ul li.active,
+.flex-nav ul li a:hover {
+	color: #222;
+	background: #fff;
+	font-weight: 700;
 }
 
 .flex-nav ul li a {
-	color: #fff;
+	color: inherit;
 	text-decoration: none;
 	padding: .2em .4em;
 }
@@ -102,13 +110,6 @@ header h1 a span {
 .flex-nav ul li a {
 	text-transform: uppercase;
 	transition: all .2s ease-in-out;
-}
-
-.flex-nav ul li a:hover,
-.flex-nav ul li a:focus {
-	color: #222;
-	background: #fff;
-	font-weight: 700;
 }
 
 /************************************
@@ -507,7 +508,7 @@ footer ul li a:focus {
         width: 120%;
 		height: 150px;
         margin: 0;
-		border-bottom: 1px solid rgba(34, 34, 34, .4);;
+		border-bottom: 1px solid rgba(34, 34, 34, .4);
 	}
 
 	.flex-nav ul li a {
