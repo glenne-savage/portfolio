@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  padding-top: 65px;
+  overflow-x: hidden;
+}
+
+hr {
+  border-top: 1px solid #0abab5;
+}
+
+.metamorpheous {
+	font-family: 'Metamorphous', cursive;
+}
+
+.navbar
+{
+   -webkit-backface-visibility: hidden;
+}
+
+.btn {
+	border-radius: 0px;
+}
+
+.carousel-indicators li {
+	border: 1px solid #0abab5;
+}
+
+.carousel-indicators .active {
+	background-color: #0abab5;
+}
+
+.section-gray {
+	background-color: #ececec;
+	padding: 45px 0px;
+}
+
+.banner-pic-1 {
+	background-image: url(../images/Wedding-17.jpg);
+	padding: 200px 0px;
+	background-position: 65% 0%;
+}
+
+.banner-pic-2 {
+	background-image: url(../images/Wedding-08.jpg);
+	padding: 200px 0px;
+	background-position: 50% 50%;
+}
+
+.banner-pic-3 {
+	background-image: url(../images/Wedding-23.jpg);
+	padding: 200px 0px;
+	background-position: 55% 15%;
+}
+
+blockquote {
+  border-left: 5px solid #0abab5;
+}
+
+.business-header {
+    height: 400px;
+    background: url('http://placehold.it/1920x400') center center no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.blockquote-reverse,
+blockquote.pull-right {
+  border-right: 5px solid #0abab5;
+}
+
+blockquote footer,
+blockquote small,
+blockquote .small {
+  color: #0abab5;
+}
+
+.text-white {
+	color: #FFF;
+	background-color: rgba(0,0,0,0.60);
+}
+
+.footer-text {
+	color: #0abab5;
+}
