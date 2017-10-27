@@ -17,6 +17,10 @@ h1, h2, h3, h4 ,h5 ,h6 {
     padding:0;
 }
 
+::selection {
+    background: #8ab1d0;
+}
+
 /************************************
               Globals
 ************************************/
@@ -182,6 +186,7 @@ section#banner p {
     width: 100%;
     height: auto;
     margin-bottom: 1.5em;
+    box-shadow: 0 0 25px 0 rgba(104, 20, 20, 0.45);
 }
 
 .project-aside {
