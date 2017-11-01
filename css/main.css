@@ -312,64 +312,78 @@ section#work p a {
 section#contact {
     background: #eaeaea;
     padding: 80px 0 40px;
-}
-
-section#contact form {
+  }
+  
+  section#contact form {
     margin: 0 auto;
     width: 90%;
-}
-
-.field {
+  }
+  
+  .field {
     position: relative;
     margin-bottom: 10px;
-	width: 100%;
-}
-
-.field label {
+    width: 100%;
+  }
+  
+  .field label {
     display: none;
-}
-
-.form-icon {
+  }
+  
+  .form-icon {
     color: #8ab1d0;
     position: absolute;
     font-size: 1.2em;
     top: 12px;
     left: 12px;
-}
-
-.formfield {
-	color: #000; 
-	background: #fff;
-	border: none;
-	padding: 12px 12px 12px 42px;
-	width: 94%;
-	display: block;
-	font-family: 'Quicksand', sans-serif;
+  }
+  
+  .formfield {
+    color: #000; 
+    background: #fff;
+    border: none;
+    padding: 12px 12px 12px 42px;
+    width: 94%;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     text-indent: 0px;
-}
-
-textarea {
+  }
+  
+  .antispam {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: none;
+  }
+  
+  textarea {
     resize: none;
-}
-
-.btn {
-	display: block;
+  }
+  
+  .btn {
+    display: block;
+    float: left;
     border: 2px solid #8ab1d0;
-	background: #8ab1d0;
-	color: #fff;
-	padding: 12px 25px;
-	cursor: pointer;
+    background: #8ab1d0;
+    color: #fff;
+    padding: 12px 25px;
+    margin-right: 1em;
+    cursor: pointer;
     text-decoration: none;
     font-family: 'Quicksand', sans-serif;
     font-size: 1em;
     font-weight: bold;
     transition: background .25s ease;
-}
-.btn:hover {
+  }
+  .btn:hover {
     background: transparent;
     color: #8ab1d0;
-}
+  }
+  
+  span#status {
+    display: block;
+    padding: .65em 0;
+    font-weight: 700;
+  }
 
 /************************************
                Clients

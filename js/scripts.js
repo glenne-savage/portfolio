@@ -21,6 +21,7 @@ function shrinkScroll() {
     });
 }
 
+
 // Jquery Scrolling
 $(document).ready(function () {
     var scrollLink = $('.scroll');
@@ -77,6 +78,34 @@ function mobMenu() {
     }
 }
 
+// Contact Form
+function _(id){
+    return document.getElementById(id);
+  }
+  
+  function submitForm(){
+      _("mybtn").disabled = true;
+      _("status").innerHTML = 'Please wait ...';
+      var formdata = new FormData();
+      formdata.append( "n", _("n").value );
+      formdata.append( "e", _("e").value );
+      formdata.append( "t", _("t").value );
+    formdata.append( "s", _("s").value );
+      formdata.append( "m", _("m").value );
+      var ajax = new XMLHttpRequest();
+      ajax.open( "POST", "form_parser.php" );
+      ajax.onreadystatechange = function() {
+          if(ajax.readyState == 4 && ajax.status == 200) {
+              if(ajax.responseText == "success"){
+                  _("status").innerHTML = '<h3 style="color: #5cb85c"><span class="fa fa-check-square-o" aria-hidden="true"></span> Message Sent</h3>';
+              } else {
+                  _("status").innerHTML = '<h3 style="color: #d9534f"><span class="fa fa-exclamation-triangle" aria-hidden="true"></span> ERROR - Message not sent</h3>';
+                  _("mybtn").disabled = false;
+              }
+          }
+      }
+      ajax.send( formdata );
+  }
 
 // Footer Copyright Date
 var year = new Date().getFullYear();

@@ -141,35 +141,31 @@
         <div class="container">
             <h2>let's work on something Together!</h2>
             <p>If you like what you've seen, let's see if we can work together on something great! I am available for freelance, contract, and permanant work, so give me a shout!</p>
-            <form method="post" action="#">
-                <div class="field">
-                    <span class="fa fa-user form-icon"></span>
-                    <label for="user_name">Full Name</label>
-                    <input class="formfield" type="text" id="user_name" name="user_name" placeholder="Full Name" required maxlength="30">
-                </div>
-                <div class="field">
-                    <span class="fa fa-envelope form-icon"></span>
-                    <label for="user_email">Email</label>
-                    <input class="formfield" type="email" id="user_email" name="user_email" placeholder="Email" required maxlength="30">
-                </div>
-                <div class="field">
-                    <span class="fa fa-mobile-phone form-icon"></span>
-                    <label for="user_phone">Phone (optional)</label>
-                    <input class="formfield" type="tel" id="user_phone" name="user_phone" placeholder="Phone (optional)" maxlength="10">
-                </div>
-                 <div class="field">
-                    <span class="fa fa-info form-icon"></span>
-                    <label for="user_subject">Subject</label>
-                    <input class="formfield" type="text" id="user_subject" name="user_subject" placeholder="Subject" required maxlength="50">
-                </div>
-                <div class="field">
-                    <span class="fa fa-comment form-icon"></span>
-                    <label for="user_msg">Message</label>
-                    <textarea class="formfield" id="user_msg" name="user_msg" rows="8" placeholder="Message" required></textarea>
-                </div>
-                <div class="field">
-                    <input class="btn" type="submit" value="Send Message">
-                </div>
+
+            <form id="my_form" onsubmit="submitForm(); return false;">
+            <div class="field">
+                <span class="fa fa-user form-icon"></span>
+                <input class="formfield" id="n" placeholder="Full Name" type="text"  required maxlength="30">
+            </div>
+            <div class="field">
+                <span class="fa fa-envelope form-icon"></span>
+                <input class="formfield" id="e" placeholder="Email" type="email" required maxlength="30">
+            </div>
+            <div class="field">
+                <span class="fa fa-exclamation-triangle form-icon"></span>
+                <input class="formfield antispam" id="t" placeholder="Do not enter anything here!" type="text">
+            </div>
+            <div class="field">
+                <span class="fa fa-info form-icon"></span>
+                <input class="formfield" id="s" placeholder="Subject" type="text" required maxlength="50">
+            </div>
+            <div class="field">
+                <span class="fa fa-comment form-icon"></span>
+                <textarea class="formfield" id="m" placeholder="Message" rows="8" required></textarea>
+            </div>
+            <div class="field">
+                <input id="mybtn" type="submit" value="Send Message" class="btn"> <span id="status"></span>
+            </div>
             </form>
         </div>
     </section>
