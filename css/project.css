@@ -2,7 +2,8 @@
               Baselines
 ************************************/
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html,
@@ -15,6 +16,10 @@ body {
 h1, h2, h3, h4 ,h5 ,h6 {
     margin: 0;
     padding:0;
+}
+
+::-moz-selection {
+    background: #8ab1d0;
 }
 
 ::selection {
@@ -54,6 +59,7 @@ header {
     height: 100px;
     padding: 1.4em 0;
 	background: transparent;
+    -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     font-size: 16px;
 }
@@ -65,9 +71,15 @@ header {
 }
 
 .flex-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 header h1 a {
@@ -76,6 +88,7 @@ header h1 a {
 	text-decoration: none;
 	border: 2px solid #fff;
 	padding: 2px 10px;
+	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 }
 
@@ -89,6 +102,8 @@ header h1 a span {
 }
 
 .flex-nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style-type: none;
 }
@@ -113,6 +128,7 @@ header h1 a span {
 
 .flex-nav ul li a {
 	text-transform: uppercase;
+	-webkit-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
 
@@ -127,9 +143,16 @@ section#banner {
     background-attachment: fixed;
     height: 50vh;
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 
@@ -174,7 +197,8 @@ section#banner p {
 .main-column {
     background: #8ab1d0;
     color: #fff;
-    flex-basis: 70%;
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
     padding: 1em;
     margin-bottom: 1.5em;
 }
@@ -187,14 +211,16 @@ section#banner p {
     width: 100%;
     height: auto;
     margin-bottom: 1.5em;
-    box-shadow: 0 0 25px 0 rgba(104, 20, 20, 0.45);
+    -webkit-box-shadow: 0 0 25px 0 rgba(104, 20, 20, 0.45);
+            box-shadow: 0 0 25px 0 rgba(104, 20, 20, 0.45);
 }
 
 .project-aside {
     color: #333;
     font-size: 1em;
     background: #eaeaea;
-    flex-basis: 28%;
+    -ms-flex-preferred-size: 28%;
+        flex-basis: 28%;
     padding: 1em 1em;
 }
 
@@ -209,6 +235,7 @@ section#banner p {
     margin: 0 auto;
     width: 195px;
     padding: .5em 1em;
+    -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
@@ -251,13 +278,21 @@ footer {
 }
 
 footer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 footer ul {
     list-style-type: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -269,6 +304,7 @@ footer ul li a {
     color: #ddd;
     border: 1px solid transparent;
     padding: .4em;
+    -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
 
@@ -283,8 +319,12 @@ footer ul li a:focus {
 ************************************/
 @media screen and (min-width: 960px) {
     .column-layout {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
     .main-column {
         margin-bottom: 0;
