@@ -164,7 +164,7 @@ section#hero p {
               About Me
 ************************************/
 section#about {
-    color: #222;
+    color: #000;
     background: #8ab1d0;
     padding-top: 85px;
 }
@@ -173,8 +173,18 @@ section#about h2 {
     font-size: 2rem;
 }
 
-section#about h2 span {
+section#about span {
     color: #fff;
+}
+
+section#about a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+section#about a:hover {
+    color: #000;
 }
 
 /************************************
