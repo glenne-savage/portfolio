@@ -120,7 +120,6 @@ header h1 a span {
                 Hero
 ************************************/
 section#hero {
-    color: #fff;
     background-image: url('../img/night-lights-01.jpg');
     background-size: cover;
     background-position: center;
@@ -129,17 +128,20 @@ section#hero {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
 section#hero h2 {
+    color: #fff;
     font-size: 50px;
     line-height: 1.2;
     margin-top: 30vh;
 }
 
 section#hero p {
+    color: #fff;
+    background: rgba(138, 177, 208, 0.6);
+    padding: .5em 1em;
     font-size: 28px;
     line-height: 1.4;
     width: 65%;
@@ -151,13 +153,12 @@ section#hero p {
 ************************************/
 #myImg {
     display: block;
-    margin: -130px auto;
-    width: 260px;
-    height: 260px;
+    margin: -110px auto;
+    width: 220px;
+    height: 220px;
     border: 5px solid #8ab1d0;
     border-radius: 50%;
 }
-
 
 /************************************
               About Me
@@ -165,7 +166,7 @@ section#hero p {
 section#about {
     color: #222;
     background: #8ab1d0;
-    padding-top: 100px;
+    padding-top: 85px;
 }
 
 section#about h2 {
@@ -180,7 +181,7 @@ section#about h2 span {
               Portfolio
 ************************************/
 #work,
-.project-background {
+#clients {
     background:
     radial-gradient(circle farthest-side at 0% 50%,#222 23.5%,rgba(240,166,17,0) 0)21px 30px,
     radial-gradient(circle farthest-side at 0% 50%,#333 24%,rgba(240,166,17,0) 0)19px 30px,
@@ -189,6 +190,7 @@ section#about h2 span {
     linear-gradient(30deg,#222 24%,#333 0,#333 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#333 0,#333 76%,#222 0)0 0,
     linear-gradient(90deg,#333 2%,#222 0,#222 98%,#333 0%)0 0 #222;
     background-size: 40px 60px;
+    background-attachment: fixed;
     color: #fff;
     padding: 80px 0 40px;
 }
@@ -389,58 +391,65 @@ section#contact {
                Clients
 ************************************/
 section#clients {
+    background:
+    radial-gradient(circle farthest-side at 0% 50%,#222 23.5%,rgba(240,166,17,0) 0)21px 30px,
+    radial-gradient(circle farthest-side at 0% 50%,#333 24%,rgba(240,166,17,0) 0)19px 30px,
+    linear-gradient(#222 14%,rgba(240,166,17,0) 0, rgba(240,166,17,0) 85%,#222 0)0 0,
+    linear-gradient(150deg,#222 24%,#333 0,#333 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#333 0,#333 76%,#222 0)0 0,
+    linear-gradient(30deg,#222 24%,#333 0,#333 26%,rgba(240,166,17,0) 0,rgba(240,166,17,0) 74%,#333 0,#333 76%,#222 0)0 0,
+    linear-gradient(90deg,#333 2%,#222 0,#222 98%,#333 0%)0 0 #222;
+    background-size: 40px 60px;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 80px 0 40px;
+  }
+  
+  section#clients {
     width: 100%;
     height: auto;
-    display: block;
-    position: relative;
-    color: #fff;
-    background: #8ab1d0;
-    padding: 80px 0 40px;
-}
-
-section#clients h2 {
+  }
+  
+  section#clients h2 {
     margin-bottom: 1.2em;
-}
-
-.testimonials {
-    margin-top: 1em;
-    
-}
-
-.testimonial {
-    width: 46%;
-    padding: 1.2em;
-    border: 2px solid #fff;
-    float: left;
-}
-
-.testimonial:last-child {
-    float: right;
-}
-
-.client-card img {
+  }
+  
+  .testimonial {
+    font-size: .9em;
+    padding: 20px;
+    margin-bottom: 2em;
+    background: rgba(138, 177, 208, 0.6);
+    flex-basis: 48%;
+  }
+  
+  .testimonial img {
     display: block;
-    width: 130px;
-    height: 130px;
-    border: 2px solid #fff;
+    max-width: 120px;
+    max-height: 120px;
+    margin: 0 auto;
+    border: 4px solid #eee;
     border-radius: 50%;
-    float: left;
-}
-
-.client-card h3,
-.client-card p {
-    text-align: right;
-    line-height: 1.2em;
-}
-
-.client-card p {
-    margin-top: 0.25em;
-    font-size: .85em;
-}
-
-.client-card p small {
-    font-size: .85em;
-}
+  }
+  
+  .testimonial h3 {
+    font-size: 1.8em;
+    margin-top: .6em;
+    text-align: center;
+  }
+  
+  .testimonial p.test-title {
+    text-align: center;
+    margin-top: .25em;
+  }
+  
+  .test-quote {
+    background: rgba(0, 0, 0, .4);
+    border: 1px solid #fff;
+    padding: .2em 1.2em;
+  }
+  
+  .testimonial span {
+    font-size: 1.8em;
+  }
 
 /************************************
                Footer
@@ -483,7 +492,37 @@ footer ul li a:focus {
 /************************************
         Home Page Media Queries
 ************************************/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
+    #myImg {
+        margin: -90px auto;
+        width: 180px;
+        height: 180px;
+    }
+
+    section#about {
+        padding-top: 60px;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    section#hero h2 {
+        font-size: 45px;
+        margin-top: 26vh;
+    }
+    
+    section#hero p {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .testimonials-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+@media only screen and (max-width: 800px) {
     header {
         padding: 2em 0;
     }
@@ -581,5 +620,33 @@ footer ul li a:focus {
 
 	.menu-toggle-open .hamburger::after {
 		transform: translateY(-3px) rotate(-90deg);
-	}
+    }
+    
+    section#hero h2 {
+        font-size: 40px;
+        margin-top: 26vh;
+    }
+    
+    section#hero p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    section#about {
+        padding-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    section#hero h2 {
+        font-size: 36px;
+        margin-top: 26vh;
+    }
+    
+    section#hero p {
+        font-size: 20px;
+        background: rgba(138, 177, 208, 0.75);
+        width: 80%
+    }
 }
