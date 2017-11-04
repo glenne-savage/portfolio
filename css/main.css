@@ -161,12 +161,14 @@ section#hero h2 {
 
 section#hero p {
     color: #fff;
-    background: rgba(138, 177, 208, 0.6);
+    background: rgba(0, 0, 0, 0.6);
     padding: .5em 1em;
+    outline: 1px solid #fff;
+    outline-offset: -11px;
     font-size: 28px;
     line-height: 1.4;
     width: 65%;
-    margin: 20px auto 0;
+    margin: 30px auto 0;
 }
 
 /************************************
@@ -646,7 +648,11 @@ footer ul li a:focus {
 	.flex-nav ul li a:focus {
 		color: #fff;
 		background: rgba(34, 34, 34, .4);
-	}
+    }
+    
+    section#hero p {
+        width: 90%
+    }
 
 	/*
 	Mobile Hambuger Styles
@@ -711,6 +717,14 @@ footer ul li a:focus {
 }
 
 @media only screen and (max-width: 640px) {
+    section#hero h2 {
+        font-size: 40px;
+    }
+    
+    section#hero p {
+        font-size: 22px;
+    }
+
     section#about {
         padding-top: 100px;
     }
@@ -719,12 +733,57 @@ footer ul li a:focus {
 @media only screen and (max-width: 480px) {
     section#hero h2 {
         font-size: 36px;
-        margin-top: 26vh;
+        margin-top: 25vh;
     }
     
     section#hero p {
         font-size: 20px;
-        background: rgba(138, 177, 208, 0.75);
-        width: 80%
+        width: 90%
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    section#hero h2 {
+        font-size: 32px;
+        margin-top: 22vh;
+    }
+
+    header h1 a {
+        font-size: 1.2em;
+    }
+}
+
+/* Vertical Viewport Media Queries*/
+@media only screen and (max-height: 505px) and (orientation: landscape) {
+    #myImg {
+        margin: -80px auto;
+        width: 160px;
+        height: 160px;
+    }
+
+    section#about {
+        padding-top: 40px;
+    }
+}
+
+@media only screen and (max-height: 460px) and (orientation: landscape) {
+    #myImg {
+        margin: -70px auto;
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media only screen and (max-height: 425px) and (orientation: landscape) {
+    #myImg {
+        margin: -60px auto;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media only screen and (max-height: 405px) and (orientation: landscape) {
+    #myImg {
+        display: none;
     }
 }
